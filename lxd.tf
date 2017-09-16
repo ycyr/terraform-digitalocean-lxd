@@ -15,17 +15,6 @@ resource "digitalocean_droplet" "lxd" {
    size = "512mb"
    ssh_keys = ["${var.ssh_key_ID}", "${var.ssh_key_ID2}"]
    tags   = ["${digitalocean_tag.lxd.id}"]
+   user_data = "${file("script.sh")}"
 
-   connection {
-    type        = "ssh"
-    private_key = "${file("${var.key_path}")}"
-    user        = "root"
-    timeout     = "2m"
-    agent 	= "true"
-  }
-
-
- provisioner "remote-exec" {
-    script  = "script.sh"
-}
 }
