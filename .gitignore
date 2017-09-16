@@ -1,2 +1,6 @@
 terraform.tfvars
 keys/
+.vagrant/
+*.backup
+./*.tfstate
+.terraform/
