@@ -7,4 +7,4 @@ keys/
 .vagrant/
 *.backup
 ./*.tfstate
-.terraform/
+.terraform/*
