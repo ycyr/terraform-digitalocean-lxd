@@ -9,3 +9,4 @@ keys/
 ./*.tfstate
 .terraform/
 .terraform/plugins/darwin_amd64/lock.json
+terraform.tfstate.lock.info
